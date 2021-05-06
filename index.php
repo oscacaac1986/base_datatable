@@ -62,31 +62,37 @@
                                     <td><strong>Id</strong></td>
                                     <td><strong>Nombre</strong></td>
                                     <td><strong>Editar</strong></td>
-                                    <td><strong>Eliminar</strong></td>
+                                    <td><strong>Activar o Desactivar</strong></td>
                                 </tr>
                             </thead>
                             <tbody></tbody>
                         </table>
                     </section>
 
-                    <!-- Modal -->
+                    <!-- Modal Edit-->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <div class="modal-header bg-success">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modificar Dependencia</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    ...
+
+                                    <input type="hidden" name="" id="inputidData">
+                                    <div class="form-group">
+                                        <label for="">Nombre:</label>
+                                        <input type="text" class="form-control" name="" id="inputNuevaData">
+                                    </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary ">Save changes</button>
+                                    <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary " id="act_dep">Guardar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <!-- Modal Insert -->
 
                     <div class="modal fade" id="InserDepModal" tabindex="-1" aria-labelledby="InserDepModalLabel" aria-hidden="true">
@@ -100,17 +106,40 @@
                                     <form method="get">
                                         <div class="form-group">
                                             <label for="" class="">Nombre:</label>
-                                            <input type="text" name="" id="insertData" class="form-control" >
+                                            <input type="text" name="" id="insertData" class="form-control">
                                         </div>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="modal-close btn btn-secondary" data-bs-dismiss="modal" id="">Cerrar</button>
                                     <button type="button" class="btn btn-primary " id="btn-insert">Guardar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Modal Delete -->
+                    <div class="modal fade" id="DeleteDepModal" tabindex="-1" aria-labelledby="DeleteDepModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-danger">
+                                    <h5 class="modal-title" id="DeleteDepModalLabel">Eliminar Dependencia</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="hidden" name="" id="inputidDelete">
+                                    Va a eliminar esta dependencia,por favor confirme
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class=" btn btn-secondary" data-bs-dismiss="modal" id="">Cancelar</button>
+                                    <button type="button" class="btn btn-primary " id="btn-del">Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
         </div>
